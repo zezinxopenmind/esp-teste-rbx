@@ -358,11 +358,11 @@ function EspObject:Render()
 		local tracer = visible.tracer;
 		tracer.Color = parseColor(self, options.tracerColor[1]);
 		tracer.Transparency = options.tracerColor[2];
-		tracer.To = (corners.bottomLeft + corners.bottomRight)*0.3;
+		tracer.To = (corners.bottomLeft + corners.bottomRight)*0.8;
 		tracer.From =
-			options.tracerOrigin == "Middle" and viewportSize*0.3 or
-			options.tracerOrigin == "Top" and viewportSize*Vector2.new(0.3, 0) or
-			options.tracerOrigin == "Bottom" and viewportSize*Vector2.new(0.3, 1);
+			options.tracerOrigin == "Middle" and viewportSize*0.8 or
+			options.tracerOrigin == "Top" and viewportSize*Vector2.new(0.8, 0) or
+			options.tracerOrigin == "Bottom" and viewportSize*Vector2.new(0.8, 1);
 
 		local tracerOutline = visible.tracerOutline;
 		tracerOutline.Color = parseColor(self, options.tracerOutlineColor[1], true);
